@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Nunito+Sans:opsz@6..12&family=Open+Sans:wght@300&family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --font-family: 'Poppins', sans-serif;
+
+    /* container var */
+    --container-bg-color: rgb(29, 42, 66);
+
+    /* Header var */
+    --header-nav-bg-color: rgb(15, 15, 36);
+    --header-nav-color: white;
+    --navbar-1-logo-li-color: white;
+    --navbar-1-logo-li-h-2-color: rgb(176, 179, 184);
+    --nav-navbar-1-user-color: rgb(160, 189, 252);
+
+    /* Translate container var */
+    --translate-container-text-color: rgb(176, 179, 184);
+    --translate-container-bg-color: rgb(15, 15, 36);
+    --translate-container-paste-button-bg-color: rgb(18, 60, 120);
+    --translate-container-paste-button-color: rgb(160, 189, 252);
+    --translate-container-button-color: red;
+    --translate-container-under-line-color: rgb(176, 179, 184);
+
+    /* language select */
+    --language-button-bg-color: rgb(15, 15, 36);
+    --language-button-color: rgb(160, 189, 252);
+    --change-language-icon-bg-color: rgb(15, 15, 36);
+    --change-language-icon-color: white;
+
+    /* Footer part all var */
+    --footer-part-bg-color: rgb(29, 42, 66);
+    --footer-part-color: rgb(176, 179, 184);
+    --footer-part-user-icon-color: rgb(160, 189, 252);
+    --footer-part-user-icon-bg-color: rgb(18, 60, 120);
+    --footer-part-voice-icon-bg-color: rgb(160, 189, 252);
+    --footer-part-voice-icon-color: rgb(0, 0, 95);
+    --footer-part-camera-icon-bg-color: rgb(18, 60, 120);
+    --footer-part-camera-icon-color: rgb(160, 189, 252);
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    min-width: 100vw;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background: var(--container-bg-color);
+}
+
+nav {
+    background: var(--header-nav-bg-color);
+    height: 10%;
+}
+
+nav>.navbar-1 {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+nav>.navbar-1>a>li>.fa-moon {
+    font-size: 1.2rem;
+    color: var(--header-nav-color);
+}
+
+nav>.navbar-1>.logo-li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    font-family: 'Inter', sans-serif;
+    font-size: .8rem;
+    gap: 10px;
+    color: var(--navbar-1-logo-li-color);
+}
+
+nav>.navbar-1>.logo-li>.h-2 {
+    color: var(--navbar-1-logo-li-h-2-color);
+}
+
+nav>.navbar-1>li>.fa-circle-user {
+    font-size: 1.7rem;
+    color: var(--header-nav-color);
+    color: var(--nav-navbar-1-user-color);
+}
+
+/* Translate container style */
+.translate-container {
+    height: 60%;
+    width: 100%;
+    background: var(--translate-container-bg-color);
+    border-radius: 0 0 20px 20px;
+    position: relative;
+}
+
+
+.translate-container>.under-line {
+    max-width: 45px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-top: 3px solid var(--translate-container-under-line-color);
+    border-radius: 50px;
+}
+
+.translate-container>.text {
+    font-size: 2rem;
+    font-family: var(--font-family);
+    color: var(--translate-container-text-color);
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    padding: 8% 0 0 7%;
+    position: relative;
+    border-radius: 0 0 20px 20px;
+}
+
+
+.translate-container>button {
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: var(--translate-container-paste-button-color);
+    background: var(--translate-container-paste-button-bg-color);
+    margin: 11% 0 0 7%;
+}
+
+/* language select style */
+.container>.language-container {
+    width: 100%;
+    height: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-container>.language-button {
+    border: none;
+    font-size: 1rem;
+    padding: 18px 35px;
+    border-radius: 10px;
+    background: var(--language-button-bg-color);
+    color: var(--language-button-color);
+}
+
+.language-container>.change-language-icon {
+    min-height: 45px;
+    min-width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 1rem;
+    border-radius: 50%;
+    background: none;
+    color: var(--change-language-icon-color);
+}
+
+/* Footer part style */
+.container>.footer-container {
+    height: 16%;
+    width: 100%;
+    background: var(--footer-part-bg-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--font-family);
+    position: relative;
+}
+
+.footer-container>.conversation,
+.voice,
+.camera {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    color: var(--footer-part-color);
+}
+
+.footer-container>div>.text {
+    font-size: .8rem;
+}
+
+.conversation>.icon {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--footer-part-user-icon-bg-color);
+    color: var(--footer-part-user-icon-color);
+    border-radius: 50%;
+    font-size: 1.1rem;
+}
+
+.voice {
+    border-radius: 50%;
+}
+
+.voice>.icon {
+    height: 90px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--footer-part-voice-icon-color);
+    font-size: 1.5rem;
+    background: var(--footer-part-voice-icon-bg-color);
+    margin-top: -20%;
+}
+
+.camera>.icon {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--footer-part-camera-icon-bg-color);
+    color: var(--footer-part-camera-icon-color);
+    border-radius: 50%;
+    font-size: 1.1rem;
+}
+
+
+
+
+/* second page */
+
+
+/* light mode page */
+#light-mode {
+    background: rgb(241, 241, 241);
+}
+
+#light-mode>nav {
+    background: white;
+}
+
+#light-mode>nav>.navbar-1>a>li>.fa-moon {
+    color: black;
+}
+
+#light-mode>nav>.navbar-1>.logo-li>.h-1 {
+    color: black;
+}
+
+#light-mode>nav>.navbar-1>.logo-li>.h-2 {
+    color: rgb(100, 100, 100);
+}
+
+#light-mode>nav>.navbar-1>li>.fa-circle-user {
+    color: rgb(36, 94, 255);
+}
+
+#light-mode>.translate-container {
+    background: white;
+}
+
+#light-mode>.translate-container>.text {
+    color: rgb(100, 100, 100);
+}
+
+#light-mode>.translate-container>button {
+    background: rgb(110, 188, 252);
+    color: black;
+}
+
+#light-mode>.language-container>.language-button {
+    background: white;
+    color: black;
+}
+
+#light-mode>.language-container>.change-language-icon {
+    color: black;
+}
+
+#light-mode>.footer-container {
+    background: rgb(241, 241, 241);
+}
+
+#light-mode>.footer-container>div>.icon {
+    background: rgb(110, 188, 252);
+    color: black;
+}
+
+#light-mode>.footer-container>.voice>.icon {
+    background: rgb(36, 94, 255);
+    color: white;
+}
+
+
+#light-mode>.footer-container>div>.text {
+    color: rgb(100, 100, 100);
+}
